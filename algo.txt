@@ -1,0 +1,26 @@
+1. Training:
+
+The code assumes a pre-trained dataset (symptoms_data.csv) containing information about diseases and their associated symptoms.
+Each row in the dataset represents a disease, with columns for the disease name and presence/absence of various symptoms (typically represented as 1 for present and 0 for absent).
+2. User Input:
+
+The code prompts the user for their symptoms (fever, cough, fatigue, etc.) as binary values (0 or 1).
+3. Disease Probability Calculation:
+
+The core of the Naive Bayes algorithm lies in calculating the posterior probability (P(disease | symptoms)) for each disease in the dataset. This represents the probability of having a particular disease given the user's symptoms.
+
+The Naive Bayes assumption comes into play here: it assumes conditional independence of symptoms, meaning the presence or absence of one symptom doesn't affect the presence or absence of another, given the disease.
+
+The code employs Laplace smoothing to avoid zero probabilities. Here's the breakdown of how the probability is calculated for each disease:
+
+a. P(symptom_i | disease): This is the probability of having symptom i given a specific disease. It's calculated by counting the number of patients in the dataset with both the disease and the symptom (disease_i == 1 and symptoms[i] == 1), divided by the total number of patients with that disease (len(data[disease])). Laplace smoothing adds 1 to both the numerator and denominator to prevent zeros.
+
+b. Overall disease probability: The posterior probability (P(disease | symptoms)) is calculated by multiplying the individual symptom probabilities (P(symptom_i | disease)) for all symptoms and then multiplying by the prior probability of the disease (P(disease)), which is typically estimated from the prevalence of the disease in the population (not explicitly implemented in the provided code).
+
+4. Disease Diagnosis:
+
+The code calculates the posterior probability for each disease based on the user's symptoms.
+The disease with the highest posterior probability is considered the most likely disease.
+5. Disease Database Update :
+
+The code offers an optional user-driven update mechanism. If the user disagrees with the diagnosis, they can choose to update the database with a new disease and their symptoms.

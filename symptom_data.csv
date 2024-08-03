@@ -1,0 +1,11 @@
+Patient_ID,Symptom1,Symptom2,Symptom3,Disease
+1,Fever,Cough,Fatigue,Common Cold
+2,Headache,Nausea,Dizziness,Migraine
+3,Joint Pain,Fever,Rash,Chickenpox
+4,Shortness of Breath,Chest Pain,Fatigue,Heart Disease
+5,Abdominal Pain,Nausea,Vomiting,Gastritis
+6,Joint Pain,Rash,Fatigue,Lupus
+7,Fever,Cough,Shortness of Breath,Influenza
+8,Headache,Dizziness,Fatigue,Anemia
+9,Abdominal Pain,Diarrhea,Vomiting,Gastroenteritis
+10,Joint Pain,Fever,Rash,Lyme Disease

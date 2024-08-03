@@ -1,0 +1,4 @@
+Fever,cough,Fatigue,Headache,Nausea,Dizziness,JointPain,Rash,Breath,ChestPain,AbdominalPain,Vomiting,Cough,Diarrhea
+
+
+
